@@ -19,5 +19,11 @@ pipeline {
             }
         }
 
+        stage('Deploy') {
+            steps {
+                bat 'xcopy /E /I /Y frontend\\dist F:\\CICD\\Deployment'
+            }
+        }
+
     }
 }
